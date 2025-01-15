@@ -25,7 +25,7 @@ The script will be stored and executed when the page is loaded, resulting in an 
 ### Running the Application
 Follow these steps to run the application locally:
 
-###Prerequisites:
+### Prerequisites:
 - Python 3 and pip installed on your system.
 
 ### Steps:
