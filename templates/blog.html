@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Lab - Food Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            width: 80%;
+            margin: 0 auto;
+        }
+        article {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        article h2 {
+            color: #ff6347;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        section {
+            width: 80%;
+            margin: 30px auto;
+        }
+        section h2 {
+            color: #ff6347;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Food Lovers Blog</h1>
+        <p>Your daily dose of delicious recipes, cooking tips, and food inspiration!</p>
+        <nav>
+            <a href="/">Home</a> | 
+            <a href="/post">Post a Comment</a>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>The Art of Baking: Secrets for Perfect Cakes</h2>
+            <p>
+                Baking is both a science and an art. To achieve the perfect cake, it's important to use fresh ingredients, 
+                measure precisely, and follow the recipe closely. Always preheat your oven and avoid overmixing the batter 
+                to keep your cakes fluffy and light. Experiment with flavors like vanilla, chocolate, or even citrus for 
+                a unique twist!
+            </p>
+        </article>
+        <article>
+            <h2>5 Quick and Healthy Breakfast Ideas</h2>
+            <ul>
+                <li><strong>Overnight Oats:</strong> Combine oats, milk, and your favorite toppings for a grab-and-go meal.</li>
+                <li><strong>Avocado Toast:</strong> Add a sprinkle of salt, pepper, and chili flakes for a flavorful start.</li>
+                <li><strong>Greek Yogurt Parfait:</strong> Layer yogurt with granola and fresh fruit.</li>
+                <li><strong>Egg Muffins:</strong> Bake eggs with veggies in a muffin tin for a protein-packed option.</li>
+                <li><strong>Fruit Smoothie:</strong> Blend fruits, spinach, and almond milk for a nutrient boost.</li>
+            </ul>
+        </article>
+        <article>
+            <h2>The Global Flavor Journey</h2>
+            <p>
+                Ever wondered how to bring the taste of different cultures to your table? Explore spices like cumin and 
+                coriander for Indian dishes, soy sauce and sesame oil for Asian flavors, or oregano and basil for Mediterranean 
+                cuisine. Experimenting with global recipes is a fantastic way to expand your palate and experience new flavors.
+            </p>
+        </article>
+    </main>
+    <section>
+        <h2>Reader Comments</h2>
+        <ul>
+            {% for comment in comments %}
+            <li>
+                <b>{{ comment.name }}</b> ({{ comment.email }} - {{ comment.website }}) says:
+                <p>{{ comment.comment | safe}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2025 Food Lovers Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
