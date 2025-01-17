@@ -39,14 +39,18 @@ Follow these steps to run the application locally:
     python3 -m venv venv
     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
     ```
-3. Install dependencies:
+3. Install dependencies(Flask):
    ```bash
-   pip install -r requirements.txt
+   pip install flask
    ```
 4. Run the Flask application:
    ```bash
    python app.py
    ```
+   or
+   ```bash
+   flask rub
+   '''
 The application should be running at http://127.0.0.1:5000/
 
 ### Access thee application:
