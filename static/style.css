@@ -1,33 +1,100 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
-h1, h2 {
-    color: #333;
-}
-
-form {
-    margin-top: 20px;
-}
-
-button {
-    background-color: #008CBA;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #005f73;
-}
-
-ul {
-    list-style-type: none;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
     padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
-li {
-    margin: 10px 0;
+/* Header Styles */
+.site-header {
+    background-color: #ff6347;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.site-header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.site-header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.site-header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+.content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.blog-post {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-post h2 {
+    color: #ff6347;
+    margin-bottom: 10px;
+}
+
+.blog-post ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.blog-post ul li {
+    margin-bottom: 10px;
+}
+
+/* Comments Section Styles */
+.comments-section {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.comments-section h2 {
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+.comment {
+    background: white;
+    border-left: 5px solid #ff6347;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9em;
 }
