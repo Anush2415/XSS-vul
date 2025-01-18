@@ -68,6 +68,15 @@ Open your browser and navigate to http://127.0.0.1:5000/. You can now view the b
 ## Fixing the Vulnerability (Solution)
 The vulnerability can be fixed by properly sanitizing user input or by escaping HTML content before rendering. This prevents malicious scripts from being executed. A potential solution would involve modifying the code to escape user inputs or using a library to sanitize HTML.
 
+### Attacked code
+- Phishing Link
+  ```html
+  <a href="https://malicious.com" onclick="alert('Clicked')">Click here</a>
+  ```
+- Event Based XSS
+  ```html
+  <img src="x" onerror="alert('Image Error XSS')">
+  ```
 ## Example of Fix:
 In the blog.html file, you can modify how comments are rendered:
 ```html
