@@ -49,8 +49,8 @@ Follow these steps to run the application locally:
    ```
    or
    ```bash
-   flask rub
-   '''
+   flask run
+   ```
 The application should be running at http://127.0.0.1:5000/
 
 ### Access thee application:
