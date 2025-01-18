@@ -71,7 +71,8 @@ The vulnerability can be fixed by properly sanitizing user input or by escaping 
 ### Attacked code
 - Phishing Link
   ```html
-  <a href="https://malicious.com" onclick="alert('Clicked')">Click here</a>
+  </section><a href="https://malicious.com" onclick="alert('Clicked')">login </a><section>
+
   ```
 - Event Based XSS
   ```html
