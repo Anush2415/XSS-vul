@@ -123,7 +123,7 @@
             {% for comment in comments %}
             <li>
                 <b>{{ comment.name }}</b> ({{ comment.email }} - {{ comment.website }}) says:
-                <p>{{ comment.comment }}</p>
+                <p>{{ comment.comment | safe }}</p>
             </li>
             {% endfor %}
         </ul>
